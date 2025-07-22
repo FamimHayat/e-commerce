@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,6 +23,52 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <nav className="w-full mx-auto">
+          <ul className="flex justify-center gap-10 pt-10">
+            {/* Products dropdown */}
+            <li className="relative group">
+              <Link
+                href="/products"
+                className="text-[35px] duration-300 hover:bg-[#000000ce] hover:text-white p-2"
+              >
+                products
+              </Link>
+
+              {/* Dropdown menu */}
+              <ul className="absolute left-0 mt-2 hidden group-hover:flex flex-col bg-[#00000080] text-2xl gap-4 p-2 w-[200px] z-10">
+                <li>
+                  <Link
+                    className="block p-1 w-full text-white hover:text-black hover:bg-amber-50"
+                    href="/products/vegetables"
+                  >
+                    vegetables
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="block p-1 w-full text-white hover:text-black hover:bg-amber-50"
+                    href="/products/grocery"
+                  >
+                    grocery
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="block p-1 w-full text-white hover:text-black hover:bg-amber-50"
+                    href="/products/medicine"
+                  >
+                    medicine
+                  </Link>
+                </li>
+              </ul>
+            </li>
+
+            {/* Services */}
+            <li className="text-[35px] duration-300 hover:bg-[#000000ce] hover:text-white p-2">
+              <Link href="/services">services</Link>
+            </li>
+          </ul>
+        </nav>
         {children}
       </body>
     </html>
