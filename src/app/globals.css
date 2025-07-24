@@ -1,1 +1,18 @@
 @import "tailwindcss";
+@utility container{
+    margin: 0 auto;
+}
+
+@theme {
+  --color-brand: #3bb77e;
+  --color-primary: #253d4e;
+  --color-secondary: #7e7e7e;
+  --color-text: #1b1b1b;
+
+  --font-headerFont: "Noto Sans", sans-serif;
+  --color-textFont: "Open Sans", sans-serif;
+}
+
+.a{
+    background-color:#1b1b1b;
+}
