@@ -13,8 +13,7 @@ import Image from "next/image";
 const Navbar = () => {
   const [show, setShow] = useState(false);
   const [sidebar, setSidebar] = useState(false);
-  const userData = false;
-  const cartData = false;
+ 
 
   return (
     <header className="relative shadow-sm px-2">

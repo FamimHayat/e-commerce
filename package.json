@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@splidejs/react-splide": "^0.7.12",
     "motion": "^12.23.7",
     "next": "15.3.5",
     "react": "^19.0.0",
