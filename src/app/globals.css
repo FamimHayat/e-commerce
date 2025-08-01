@@ -10,7 +10,7 @@
   --color-text: #1b1b1b;
 
   --font-headerFont: "Noto Sans", sans-serif;
-  --color-textFont: "Open Sans", sans-serif;
+  --font-textFont: "Open Sans", sans-serif;
 }
 
 .a{
@@ -29,5 +29,8 @@
     gap: 0.5rem;
     justify-content: space-between;
     align-items: center;
+    
   }
+
 }
+

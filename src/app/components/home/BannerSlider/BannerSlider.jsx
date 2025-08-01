@@ -7,7 +7,7 @@ import BannerSliderTag from "./BannerSliderTag";
 
 const BannerSlider = () => {
   return (
-    <div className="  sm:w-[calc(100dvw-50px)] md:w-[calc(100dvw-150px)] lg:w-[calc(100dvw-250px)] xl:w-[calc(100dvw-350px)] mx-auto  overflow-hidden py-8">
+    <div className=" sm:w-[calc(100dvw-50px)] md:w-[calc(100dvw-150px)] lg:w-[calc(100dvw-250px)] xl:w-[calc(100dvw-350px)] mx-auto  overflow-hidden py-8">
       <Splide
         aria-label="My Favorite Images"
         options={{
