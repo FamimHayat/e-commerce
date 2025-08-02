@@ -6,28 +6,28 @@ import CatagoriesShopNow from './CatagoriesShopNow'
 
 const Catagories = () => {
   return (
-    <div className="overflow-hidden mt-10 md:my-25">
-      <div className="relative container flex flex-col lg:flex-row  items-center   gap-10 md:gap-15">
+    <div className="mt-10 overflow-hidden md:my-25">
+      <div className="container relative flex flex-col items-center gap-10 lg:flex-row md:gap-15">
         <Header headerText={"Featured Categories"} />
         <nav>
-          <ul className="grid grid-cols-2 md:grid-cols-4 place-items-center gap-5 text-lg font-textFont font-semibold text-primary ">
+          <ul className="grid grid-cols-2 place-items-center gap-5 text-lg font-semibold text-primary font-textFont md:grid-cols-4">
             <li>
-              <Link href="/" className=" duration-200 hover:text-brand ">
+              <Link href="/" className="duration-200 hover:text-brand">
                 Cake & Milk
               </Link>
             </li>
             <li>
-              <Link href="/" className=" duration-200 hover:text-brand ">
+              <Link href="/" className="duration-200 hover:text-brand">
                 Coffee & Teas
               </Link>
             </li>
             <li>
-              <Link href="/" className=" duration-200 hover:text-brand ">
+              <Link href="/" className="duration-200 hover:text-brand">
                 Pet Foods
               </Link>
             </li>
             <li>
-              <Link href="/" className=" duration-200 hover:text-brand ">
+              <Link href="/" className="duration-200 hover:text-brand">
                 Vegetables
               </Link>
             </li>

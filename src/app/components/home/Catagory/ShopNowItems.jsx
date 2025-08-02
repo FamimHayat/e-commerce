@@ -1,21 +1,21 @@
-
-import Link from "next/link"
+import Link from "next/link";
 import React from "react";
 import { LuMoveRight } from "react-icons/lu";
 
-const ShopNowItems = ({style}) => {
+const ShopNowItems = ({ style }) => {
   return (
     <div
-      className="p-2 sm:p-0 bg-cover bg-center h-74 w-full rounded-2xl overflow-hidden "
+      className="bg-cover bg-center h-74 w-full rounded-2xl overflow-hidden p-2 sm:p-0 "
       style={style}
     >
-      <div className="px-3 md:pl-6 lg:pl-8 xl:pl-10 flex justify-center h-full flex-col group">
-        <h2 className="text-primary  text-[28px] sm:text-[22px] md:text-[25px] font-semibold font-textFont sm:max-w-3xs duration-150  group-hover:">
+      <div className="flex h-full flex-col justify-center px-3 group md:pl-6 lg:pl-8 xl:pl-10">
+        <h2 className="text-primary font-semibold font-textFont duration-150 text-[28px] sm:text-[22px] md:text-[25px] sm:max-w-3xs ">
           Everyday Fresh & Clean with Our Products
         </h2>
         <Link
           href="/"
-          className="flex items-center gap-2 text-xl md:text-md bg-brand  md:w-fit p-3 md:p-2 text-white rounded-lg font-textFont mt-10 duration-150 hover:shadow-2xl  "
+          className="flex items-center gap-2 rounded-lg bg-brand p-3 text-xl text-white duration-250 mt-10 font-textFont md:w-fit md:p-2 md:text-md 
+          button-shadow-hover hover:scale-105"
         >
           shop now <LuMoveRight />
         </Link>

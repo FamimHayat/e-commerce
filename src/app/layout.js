@@ -1,10 +1,8 @@
-// src/app/layout.js
 import "./globals.css";
-import Link from "next/link";
+
 import NavBar from "./components/common/NavBar";
 
 import { Noto_Sans, Open_Sans } from "next/font/google";
-
 
 const notoSans = Noto_Sans({
   subsets: ["latin"],
@@ -28,10 +26,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html
-      lang="en"
-      className={`${notoSans.variable} ${openSans.variable}`}
-    >
+    <html lang="en" className={`${notoSans.variable} ${openSans.variable}`}>
       <body className="antialiased">
         <NavBar />
         {children}

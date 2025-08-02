@@ -3,9 +3,9 @@ import React, { useState } from "react";
 import { FaBox, FaSearch } from "react-icons/fa";
 import { PiShoppingCart } from "react-icons/pi";
 import { FaChevronDown } from "react-icons/fa";
-import { IoCall, IoCloseCircleSharp } from "react-icons/io5";
-import { IoReorderThreeOutline } from "react-icons/io5";
+import { IoCloseCircleSharp, IoReorderThreeOutline } from "react-icons/io5";
 import { FaFireAlt } from "react-icons/fa";
+import { TfiHeadphoneAlt } from "react-icons/tfi";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -13,20 +13,19 @@ import Image from "next/image";
 const Navbar = () => {
   const [show, setShow] = useState(false);
   const [sidebar, setSidebar] = useState(false);
- 
 
   return (
-    <header className="relative shadow-sm px-2">
+    <header className="px-2 shadow-sm relative">
       {/* Header Top Part */}
       <div className="container">
-        <div className="flex justify-between items-center py-8 gap-8">
+        <div className="py-8 gap-8 flex justify-between items-center">
           <button
             onClick={() => setSidebar(true)}
-            className="md:hidden text-3xl text-primary cursor-pointer"
+            className="cursor-pointer text-primary text-3xl md:hidden"
           >
             <IoReorderThreeOutline />
           </button>
-          <Link href="/" className="w-32 inline-block lg:w-auto">
+          <Link href="/" className="inline-block w-32 lg:w-auto">
             <Image
               src="/brand-logo.png"
               width={128}
@@ -35,29 +34,29 @@ const Navbar = () => {
               className="w-32"
             />
           </Link>
-          <div className="border-2 border-brand opacity-50 p-2 lg:p-3 rounded w-full max-w-64  lg:max-w-[700px] hidden md:flex items-center">
+          <div className="border-2 border-brand opacity-50 p-2 rounded w-full max-w-64 hidden items-center md:flex lg:max-w-[700px] lg:p-3">
             <select
               name=""
               id=""
-              className=" pr-3.5 border-r-2 cursor-pointer border-slate-200 text-primary hidden lg:block"
+              className="border-r-2  pr-3.5 text-primary cursor-pointer border-brand hidden lg:block"
             >
-              <option value="">All Categories</option>
-              <option value="">All Categories</option>
-              <option value="">All Categories</option>
+              <option value="" className="text-sm font-textFont text-primary">All Categories</option>
+              <option value="" className="text-sm font-textFont text-primary">All Categories</option>
+              <option value="" className="text-sm font-textFont text-primary">All Categories</option>
             </select>
             <input
               type="text"
               placeholder="Search for items..."
-              className="px-3.5 w-full lg:w-2/3 outline-0"
+              className="w-full px-3.5 outline-0 lg:w-2/3"
             />
             <FaSearch className="ml-auto cursor-pointer" />
           </div>
           <div>
-            <ul className="flex items-center gap-4 lg:gap-8 text-sm">
+            <ul className="text-sm flex items-center gap-4 lg:gap-8">
               <li>
                 <Link
                   href="/login"
-                  className="flex items-center gap-1 text-xl border-brand sm:border-2 py-1 px-2 md:px-3 font-headerFont hover:shadow-2xl duration-200 md:hover:bg-brand hover:text-white"
+                  className="flex items-center gap-1 text-white rounded-md text-2xl px-2 py-1 border-brand font-headerFont duration-200 bg-brand button-shadow-hover"
                 >
                   <PiShoppingCart />{" "}
                   <span className="hidden md:flex">cart</span>
@@ -66,7 +65,7 @@ const Navbar = () => {
               <li>
                 <Link
                   href="/login"
-                  className="text-base md:text-xl border-brand sm:border-2 py-1 px-2 md:px-3 font-headerFont hover:shadow-2xl duration-200 md:hover:bg-brand hover:text-white"
+                  className="flex items-center gap-1 text-white rounded-md text-2xl px-2 py-1 border-brand font-headerFont duration-200 bg-brand button-shadow-hover"
                 >
                   login
                 </Link>
@@ -75,13 +74,13 @@ const Navbar = () => {
           </div>
           {/* Main menu mobile view */}
           <nav
-            className={`w-full h-screen bg-[rgba(0,0,0,0.6)] absolute top-0 left-0 transition-all z-50 ${
+            className={`absolute top-0 left-0 z-50 w-full h-screen bg-[rgba(0,0,0,0.6)] transition-all ${
               sidebar ? "translate-x-0" : "-translate-x-full"
-            } `}
+            }`}
           >
-            <div className="w-[95%] h-full pt-2 bg-white overflow-y-auto">
-              <div className="flex justify-between items-center border-b border-[#ececec] pb-4 mb-4 px-4">
-                <Link href="/" className="w-32 inline-block">
+            <div className="pt-2 w-[95%] h-full bg-white overflow-y-auto">
+              <div className="flex justify-between items-center pb-4 mb-4 border-b border-[#ececec] px-4">
+                <Link href="/" className="inline-block w-32">
                   <Image
                     width={128}
                     height={50}
@@ -91,25 +90,25 @@ const Navbar = () => {
                 </Link>
                 <button
                   onClick={() => setSidebar(false)}
-                  className="text-2xl text-brand cursor-pointer"
+                  className="cursor-pointer text-2xl text-brand"
                 >
                   <IoCloseCircleSharp />
                 </button>
               </div>
-              <div className="px-4 flex flex-col gap-4">
-                <div className="border-2 border-brand p-2 lg:p-5 rounded w-full flex items-center">
+              <div className="flex flex-col gap-4 px-4">
+                <div className="flex items-center border-2 border-brand p-2 rounded w-full lg:p-5">
                   <input
                     type="text"
                     placeholder="Search for items..."
-                    className="px-3.5 w-full lg:w-2/3 outline-0"
+                    className="w-full px-3.5 outline-0 lg:w-2/3"
                   />
                   <FaSearch className="ml-auto" />
                 </div>
-                <ul className="font-semibold font-headerFont text-primary text-base flex flex-col items-center text-center w-full">
+                <ul className="w-full flex flex-col items-center text-center text-base font-headerFont font-semibold text-primary">
                   <li className="w-full ">
                     <Link
                       href="/"
-                      className="block border-b border-[#ececec] py-2"
+                      className="block py-2 border-b border-[#ececec]"
                     >
                       Deals
                     </Link>
@@ -117,7 +116,7 @@ const Navbar = () => {
                   <li className="w-full">
                     <Link
                       href="/"
-                      className="block border-b border-[#ececec] py-2"
+                      className="block py-2 border-b border-[#ececec]"
                     >
                       Home
                     </Link>
@@ -125,7 +124,7 @@ const Navbar = () => {
                   <li className="w-full">
                     <Link
                       href="/"
-                      className="block border-b border-[#ececec] py-2"
+                      className="block py-2 border-b border-[#ececec]"
                     >
                       About
                     </Link>
@@ -133,7 +132,7 @@ const Navbar = () => {
                   <li className="w-full">
                     <Link
                       href="/shop"
-                      className="block border-b border-[#ececec] py-2"
+                      className="block py-2 border-b border-[#ececec]"
                     >
                       Shop
                     </Link>
@@ -141,7 +140,7 @@ const Navbar = () => {
                   <li className="w-full">
                     <Link
                       href="/"
-                      className="block border-b border-[#ececec] py-2"
+                      className="block py-2 border-b border-[#ececec]"
                     >
                       Vendors
                     </Link>
@@ -149,7 +148,7 @@ const Navbar = () => {
                   <li className="w-full">
                     <Link
                       href="/"
-                      className="block border-b border-[#ececec] py-2"
+                      className="block py-2 border-b border-[#ececec]"
                     >
                       Mega menu
                     </Link>
@@ -157,7 +156,7 @@ const Navbar = () => {
                   <li className="w-full">
                     <Link
                       href="/"
-                      className="block border-b border-[#ececec] py-2"
+                      className="block py-2 border-b border-[#ececec]"
                     >
                       Blog
                     </Link>
@@ -165,7 +164,7 @@ const Navbar = () => {
                   <li className="w-full">
                     <Link
                       href="/"
-                      className="block border-b border-[#ececec] py-2"
+                      className="block py-2 border-b border-[#ececec]"
                     >
                       Pages
                     </Link>
@@ -173,7 +172,7 @@ const Navbar = () => {
                   <li className="w-full">
                     <Link
                       href="/"
-                      className="block border-b border-[#ececec] py-2"
+                      className="block py-2 border-b border-[#ececec]"
                     >
                       Contact
                     </Link>
@@ -185,19 +184,20 @@ const Navbar = () => {
         </div>
       </div>
       {/* Main Menu desktop view*/}
-      <nav className="hidden md:block py-3 border-t shadow-md border-[#ececec]">
+      <nav className="py-3 border-t shadow-md hidden md:block border-[#ececec]">
         <div className="container flex items-center gap-4 xl:gap-9">
           <div className="relative">
             <h3
               onClick={() => setShow(!show)}
-              className="p-2 xl:py-3 xl:px-6 bg-brand rounded-md font-headerFont  text-white text-xs xl:text-base font-bold flex items-center gap-1 xl:gap-2 cursor-pointer border-2 border-transparent duration-150 hover:border-brand hover:bg-white  hover:text-text "
+              className="flex items-center gap-1 p-2 text-xs font-bold text-white bg-brand border-2 border-transparent rounded-md cursor-pointer font-headerFont duration-150 hover:bg-white hover:text-text hover:border-brand xl:text-base xl:gap-2 xl:px-6 xl:py-3"
             >
               <FaBox /> <span className="hidden xl:inline">Browse All</span>{" "}
               Categories <FaChevronDown />
             </h3>
             {show && (
-              <div className="bg-white w-md rounded-lg absolute top-10 xl:top-20 left-0 p-7 shadow-2xl border-2   border-brand grid grid-cols-2 gap-6 z-50 ">
-                <div className="flex items-center gap-2 cursor-pointer shadow py-2 px-3 group duration-150 hover:bg-brand">
+              <div className="absolute top-10 left-0 p-7 border-2 border-brand bg-white rounded-lg shadow-2xl grid grid-cols-2 gap-6 z-50 xl:top-20 w-md">
+                {/* Manually written items instead of map */}
+                <div className="flex items-center gap-2 cursor-pointer shadow py-2 px-3 rounded-lg group duration-150 hover:bg-brand">
                   <div className="bg-white p-1 rounded-md">
                     <Image
                       width={24}
@@ -207,129 +207,129 @@ const Navbar = () => {
                       className="w-6"
                     />
                   </div>
-                  <p className="font-bold text-sm text-primary group-hover:text-white ">
+                  <p className="text-sm font-bold text-primary group-hover:text-white">
                     Milks and Dairies
                   </p>
                 </div>
-                <div className="flex items-center gap-2 cursor-pointer shadow py-2 px-3 group duration-150 hover:bg-brand">
+                <div className="flex items-center gap-2 cursor-pointer shadow py-2 px-3 rounded-lg group duration-150 hover:bg-brand">
                   <div className="bg-white p-1 rounded-md">
                     <Image
                       width={24}
                       height={50}
                       src="/category-1.svg"
-                      alt="category1"
+                      alt="category2"
                       className="w-6"
                     />
                   </div>
-                  <p className="font-bold text-sm text-primary group-hover:text-white">
-                    Milks and Dairies
+                  <p className="text-sm font-bold text-primary group-hover:text-white">
+                    Fruits & Vegetables
                   </p>
                 </div>
-                <div className="flex items-center gap-2 cursor-pointer shadow py-2 px-3 group duration-150 hover:bg-brand">
+                <div className="flex items-center gap-2 cursor-pointer shadow py-2 px-3 rounded-lg group duration-150 hover:bg-brand">
                   <div className="bg-white p-1 rounded-md">
                     <Image
                       width={24}
                       height={50}
                       src="/category-1.svg"
-                      alt="category1"
+                      alt="category3"
                       className="w-6"
                     />
                   </div>
-                  <p className="font-bold  text-sm text-primary group-hover:text-white">
-                    Milks and Dairies
+                  <p className="text-sm font-bold text-primary group-hover:text-white">
+                    Beverages
                   </p>
                 </div>
-                <div className="flex items-center gap-2 cursor-pointer shadow py-2 px-3 group duration-150 hover:bg-brand">
+                <div className="flex items-center gap-2 cursor-pointer shadow py-2 px-3 rounded-lg group duration-150 hover:bg-brand">
                   <div className="bg-white p-1 rounded-md">
                     <Image
                       width={24}
                       height={50}
                       src="/category-1.svg"
-                      alt="category1"
+                      alt="category4"
                       className="w-6"
                     />
                   </div>
-                  <p className="font-bold text-sm text-primary group-hover:text-white">
-                    Milks and Dairies
+                  <p className="text-sm font-bold text-primary group-hover:text-white">
+                    Snacks
                   </p>
                 </div>
-                <div className="flex items-center gap-2 cursor-pointer shadow py-2 px-3 group duration-150 hover:bg-brand">
+                <div className="flex items-center gap-2 cursor-pointer shadow py-2 px-3 rounded-lg group duration-150 hover:bg-brand">
                   <div className="bg-white p-1 rounded-md">
                     <Image
                       width={24}
                       height={50}
                       src="/category-1.svg"
-                      alt="category1"
+                      alt="category5"
                       className="w-6"
                     />
                   </div>
-                  <p className="font-bold text-sm text-primary group-hover:text-white">
-                    Milks and Dairies
+                  <p className="text-sm font-bold text-primary group-hover:text-white">
+                    Frozen Foods
                   </p>
                 </div>
-                <div className="flex items-center gap-2 cursor-pointer shadow py-2 px-3 group duration-150 hover:bg-brand">
+                <div className="flex items-center gap-2 cursor-pointer shadow py-2 px-3 rounded-lg group duration-150 hover:bg-brand">
                   <div className="bg-white p-1 rounded-md">
                     <Image
                       width={24}
                       height={50}
                       src="/category-1.svg"
-                      alt="category1"
+                      alt="category6"
                       className="w-6"
                     />
                   </div>
-                  <p className="font-bold text-sm text-primary group-hover:text-white">
-                    Milks and Dairies
+                  <p className="text-sm font-bold text-primary group-hover:text-white">
+                    Household Supplies
                   </p>
                 </div>
               </div>
             )}
           </div>
-          <ul className="flex gap-3 xl:gap-8 font-headerFont font-semibold  text-primary text-base xl:text-lg">
+          <ul className="text-base font-headerFont font-semibold text-primary flex gap-3 xl:text-lg xl:gap-8">
             <li>
               <Link
                 href="/"
-                className="flex  items-center gap-1 hover:text-brand transition"
+                className="flex items-center gap-1 transition hover:text-brand"
               >
                 <FaFireAlt className="text-2xl" /> <span>Deals</span>
               </Link>
             </li>
             <li>
-              <Link href="/" className="hover:text-brand transition">
+              <Link href="/" className="transition hover:text-brand">
                 Home
               </Link>
             </li>
             <li>
-              <Link href="/" className="hover:text-brand transition">
+              <Link href="/" className="transition hover:text-brand">
                 About
               </Link>
             </li>
             <li>
-              <Link href="/shop" className="hover:text-brand transition">
+              <Link href="/shop" className="transition hover:text-brand">
                 Shop
               </Link>
-            </li>{" "}
+            </li>
             <li>
-              <Link href="/shop" className="hover:text-brand transition">
+              <Link href="/" className="transition hover:text-brand">
                 Vendors
               </Link>
             </li>
             <li>
-              <Link href="/" className="hover:text-brand transition">
+              <Link href="/" className="transition hover:text-brand">
                 Mega menu
               </Link>
             </li>
             <li>
-              <Link href="/" className="hover:text-brand transition">
+              <Link href="/" className="transition hover:text-brand">
                 Blog
               </Link>
-            </li>{" "}
+            </li>
             <li>
-              <Link href="/" className="hover:text-brand transition">
+              <Link href="/" className="transition hover:text-brand">
                 Pages
               </Link>
             </li>
             <li>
-              <Link href="/" className="hover:text-brand transition">
+              <Link href="/" className="transition hover:text-brand">
                 Contact
               </Link>
             </li>
@@ -338,10 +338,9 @@ const Navbar = () => {
             href="tel: 1900 - 888"
             className="ml-auto flex items-center gap-2"
           >
-            <IoCall className="text-2xl xl:text-4xl" />
+            <TfiHeadphoneAlt className="text-2xl text-gray-500 xl:text-4xl mr-2" />
             <div>
               <p className="text-brand font-bold text-base xl:text-2xl">
-                {" "}
                 1900 - 888
               </p>
               <p className="text-secondary font-medium text-xs xl:text-sm">

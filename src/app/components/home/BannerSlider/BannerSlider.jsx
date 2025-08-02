@@ -7,7 +7,7 @@ import BannerSliderTag from "./BannerSliderTag";
 
 const BannerSlider = () => {
   return (
-    <div className=" sm:w-[calc(100dvw-50px)] md:w-[calc(100dvw-150px)] lg:w-[calc(100dvw-250px)] xl:w-[calc(100dvw-350px)] mx-auto  overflow-hidden py-8">
+    <div className="mx-auto overflow-hidden py-8 sm:w-[calc(100dvw-50px)] md:w-[calc(100dvw-150px)] lg:w-[calc(100dvw-250px)] xl:w-[calc(100dvw-350px)]">
       <Splide
         aria-label="My Favorite Images"
         options={{
@@ -19,26 +19,26 @@ const BannerSlider = () => {
           pagination: true,
           keyboard: true,
         }}
-        className="rounded-xl shadow-lg responsive-arrows"
+        className="responsive-arrows rounded-xl shadow-lg"
       >
         <SplideSlide>
-          <div className="relative w-full h-[calc(100dvh-350px)]">
+          <div className="relative h-[calc(100dvh-350px)] w-full">
             <Image
               src="/banner-slider-1.png"
               alt="Image 1"
               fill
-              className=" object-cover rounded-xl"
+              className="rounded-xl object-cover"
             />
             <BannerSliderTag />
           </div>
         </SplideSlide>
         <SplideSlide>
-          <div className="relative w-full h-[calc(100dvh-350px)]">
+          <div className="relative h-[calc(100dvh-350px)] w-full">
             <Image
               src="/banner-slider-2.png"
               alt="Image 2"
               fill
-              className="object-cover rounded-xl"
+              className="rounded-xl object-cover"
             />
             <BannerSliderTag />
           </div>
