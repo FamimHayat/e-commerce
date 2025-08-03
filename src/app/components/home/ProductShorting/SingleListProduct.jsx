@@ -5,7 +5,10 @@ import { FaStar, FaStarHalf } from "react-icons/fa";
 
 const SingleListProduct = () => {
   return (
-    <Link href="/" className=" pt-5 pb-5 duration-200 hover:pt-3 hover:pb-7 ">
+    <Link
+      href="/"
+      className=" pt-5 pb-5 duration-200 hover:pt-3 hover:pb-7 group"
+    >
       <div className="flex  justify-center sm:justify-start gap-3 ">
         <Image
           width={100}
@@ -14,7 +17,7 @@ const SingleListProduct = () => {
           src="/top-rated-1.jpg"
           alt="product-image"
         />
-        <div className="shadow-2xs scale-80 2xl:scale-100">
+        <div className="border-b border-[#0000002a] group-hover:border-brand scale-80 2xl:scale-100">
           <h3 className="font-semibold font-textFont text-primary">
             Nestle Original Coffee-Mate Coffee Creamer
           </h3>

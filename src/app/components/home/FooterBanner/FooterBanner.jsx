@@ -8,7 +8,7 @@ const FooterBanner = () => {
         style={{ backgroundImage: "url('/banner-slider-1.png')" }}
         className="h-fit rounded-2xl"
       >
-        <div className=" flex text-center py-10 lg:py-20  h-full w-full flex-col items-center justify-center p-2 font-headerFont scale-70 md:scale-75 lg:scale-80 xl:scale-100 lg:mt-15 ">
+        <div className=" flex text-center py-10 lg:py-20  h-full w-full flex-col items-center justify-center p-2 font-headerFont scale-80 xl:scale-100 lg:mt-15 ">
           <div className="p-3 ">
             <h2 className="max-w-sm text-4xl font-semibold text-primary sm:max-w-xl sm:text-[40px] md:text-[50px] lg:max-w-2xl lg:text-[60px]">
               Don't miss amazing grocery deals
