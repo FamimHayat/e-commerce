@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { FaCartPlus, FaStar, FaStarHalf } from "react-icons/fa";
+import { FaStar, FaStarHalf } from "react-icons/fa";
 import { PiShoppingCartDuotone } from "react-icons/pi";
 
 const DealOfTheDayItems = ({ style }) => {
