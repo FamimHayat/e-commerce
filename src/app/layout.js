@@ -3,6 +3,7 @@ import "./globals.css";
 import NavBar from "./components/common/NavBar";
 
 import { Noto_Sans, Open_Sans } from "next/font/google";
+import Footer from "./components/home/Footer/Footer"
 
 const notoSans = Noto_Sans({
   subsets: ["latin"],
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
       <body className="antialiased">
         <NavBar />
         {children}
+        <Footer/>
       </body>
     </html>
   );

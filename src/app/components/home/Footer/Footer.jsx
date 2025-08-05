@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import FooterTag from "./FooterTag"
 
 const Footer = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -279,7 +280,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="container">FooterTag</div>
+      <div className="container"><FooterTag/></div>
     </footer>
   );
 };
