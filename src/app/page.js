@@ -1,5 +1,6 @@
 
 import BannerSlider from "./components/home/BannerSlider/BannerSlider"
+import BestSaleProducts from "./components/home/BestSale/BestSaleProducts"
 import Catagories from "./components/home/Catagory/Catagories"
 import DealOfTheDay from "./components/home/DealsOfTheDay/DealOfTheDay"
   
@@ -16,6 +17,7 @@ export default function Home() {
       <BannerSlider />
       <Catagories />
       <PopularProducts />
+      <BestSaleProducts/>
       <DealOfTheDay />
       <ProductShortList />
       <FooterBanner />

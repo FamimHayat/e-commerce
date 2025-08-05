@@ -10,9 +10,9 @@ const DealOfTheDay = () => {
       <div className="flex flex-col sm:flex-row justify-between">
         <Header headerText={"Deals Of The Day"} />
         <Link href="/">
-          <div className="flex  items-center">
+          <div className="mt-3 flex justify-center items-center">
             <p className="text-lg  text-primary duration-200 hover:text-brand text-center ">all deals</p>{" "}
-            <MdKeyboardArrowRight className="hidden sm:flex mt-1 text-2xl text-primary duration-200 hover:text-brand!" />
+            <MdKeyboardArrowRight className=" mt-1 text-2xl text-primary duration-200 hover:text-brand!" />
           </div>
         </Link>
       </div>

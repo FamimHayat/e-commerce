@@ -17,8 +17,6 @@
   background-color: #1b1b1b;
 }
 
-
-
 .responsive-arrows .splide__arrows {
   display: none;
 }
@@ -39,4 +37,11 @@
 .button-shadow-hover:hover {
   box-shadow: #3bb77e66 0px 5px, #3bb77e4d 0px 10px, #3bb77e33 0px 15px,
     #3bb77e1a 0px 20px, #3bb77e0d 0px 25px;
+}
+
+.product-shadow {
+box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.product-shadow-hover:hover {
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
