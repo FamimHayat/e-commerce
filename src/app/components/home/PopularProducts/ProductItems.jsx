@@ -6,7 +6,7 @@ import { PiShoppingCartDuotone } from "react-icons/pi";
 
 const ProductItems = () => {
   return (
-    <div className="mt-3 border-2 border-[#00000021] rounded-2xl w-fit m-1 p-2 shadow-md duration-150 product-shadow-hover hover:border-brand">
+    <div className="mt-3 border-2 border-[#00000021] rounded-2xl w-fit  p-2 shadow-md duration-150 product-shadow-hover hover:border-brand">
       <Link href="/">
         <div className="relative w-50 h-60 mx-auto group overflow-hidden">
           <Image
