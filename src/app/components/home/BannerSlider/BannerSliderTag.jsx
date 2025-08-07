@@ -1,11 +1,11 @@
 import React from 'react'
 
-const BannerSliderTag = () => {
+const BannerSliderTag = ({headerText}) => {
   return (
     <div className="absolute flex h-full w-full flex-col items-center justify-center p-2 font-headerFont lg:mt-15 xl:items-start xl:justify-start">
       <div className="p-3 sm:p-0 xl:p-20">
         <h2 className="max-w-sm text-4xl font-semibold text-primary sm:max-w-xl sm:text-[40px] md:text-[50px] lg:max-w-2xl lg:text-[60px]">
-          Don't miss amazing grocery deals
+          {headerText}
         </h2>
         <p className="mt-5 max-w-2xl text-2xl text-primary opacity-70 md:mt-10 lg:text-3xl">
           Sign up for daily newsletter

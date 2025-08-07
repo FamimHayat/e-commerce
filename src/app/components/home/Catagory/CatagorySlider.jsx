@@ -3,7 +3,7 @@
 import React from "react";
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import Image from "next/image";
-import Link from "next/link"
+import Link from "next/link";
 
 const CatagorySlider = () => {
   return (
@@ -46,10 +46,10 @@ const CatagorySlider = () => {
                 className="h-auto w-full rounded-xl object-cover"
               />
               <h2 className="pb-2 text-center text-xl font-semibold text-primary font-textFont">
-                oranges
+                Oranges
               </h2>
               <p className="pb-4 text-center text-sm font-semibold text-primary font-textFont">
-                22items
+                22 items
               </p>
             </Link>
           </SplideSlide>

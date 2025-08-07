@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import Image from "next/image";
@@ -9,11 +10,13 @@ const BannerSlider = () => {
   return (
     <div className="mx-auto overflow-hidden py-8 sm:w-[calc(100dvw-50px)] md:w-[calc(100dvw-150px)] lg:w-[calc(100dvw-250px)] xl:w-[calc(100dvw-350px)]">
       <Splide
-        aria-label="My Favorite Images"
+        aria-label="Banner Slider"
         options={{
-          type: "loop",
+          type: "fade", // use fade transition here
+          rewind: true,
           perPage: 1,
           interval: 3000,
+          autoplay: true,
           pauseOnHover: true,
           arrows: true,
           pagination: true,
@@ -29,7 +32,7 @@ const BannerSlider = () => {
               fill
               className="rounded-xl object-cover"
             />
-            <BannerSliderTag />
+            <BannerSliderTag headerText={"Don't miss amazing grocery deals"} />
           </div>
         </SplideSlide>
         <SplideSlide>
@@ -40,7 +43,7 @@ const BannerSlider = () => {
               fill
               className="rounded-xl object-cover"
             />
-            <BannerSliderTag />
+            <BannerSliderTag headerText={"Fresh Vegetables Big Discount"} />
           </div>
         </SplideSlide>
       </Splide>
