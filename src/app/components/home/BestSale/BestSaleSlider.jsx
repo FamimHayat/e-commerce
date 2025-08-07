@@ -7,7 +7,7 @@ import ProductItems from "../PopularProducts/ProductItems";
 
 const BestSaleSlider = () => {
   return (
-    <div className="w-[300px]  sm:w-200 mx-auto sm:px-20 lg:px-0 lg:w-200 xl:w-240 2xl:w-320   overflow-hidden">
+    <div className="w-[300px] px-1.5 sm:w-200 mx-auto sm:px-20 lg:px-0 lg:w-200 xl:w-240 2xl:w-320   overflow-hidden">
       <Splide
         aria-label="Best Sale Slider"
         options={{
