@@ -13,11 +13,11 @@ const BestSaleProducts = () => {
         </div>
         <div className="flex flex-col lg:flex-row items-center gap-5">
           <div
-            className="w-full lg:w-90 h-130 rounded-2xl mt-10  "
+            className="w-full lg:w-90 h-120 rounded-2xl mt-8  bg-no-repeat bg-cover"
             style={{ backgroundImage: "url('/best-sale-background.png" }}
           >
             <div className="p-4 h-full flex flex-col justify-center">
-              <h2 className="text-3xl xl:text-4xl text-primary w-[210px]v xl  font-headerFont font-semibold mb-10">
+              <h2 className="text-3xl sm:text-5xl lg:text-3xl xl:text-4xl text-primary w-[210px]v xl  font-headerFont font-semibold mb-10">
                 {" "}
                 Bring nature into your home
               </h2>
