@@ -1,0 +1,124 @@
+"use client";
+
+import React from "react";
+import Link from "next/link";
+import Image from "next/image";
+
+const page = () => {
+  return (
+    <div className="container flex justify-center py-10 px-2">
+      <div className="max-w-lg w-full">
+        <div className="bg-brand rounded-lg shadow-xl overflow-hidden hover:shadow-[0_10px_25px_-5px_rgba(0,0,0,0.1),0_10px_10px_-5px_rgba(0,0,0,0.04)]">
+          <div className="p-8">
+            <Image
+              src={"/footer-brand-logo.svg"}
+              width={50}
+              height={50}
+              className="w-30 h-15 p-1 rounded-xl mx-auto bg-white"
+              alt="brand-logo"
+            />
+            <p className="mt-4  text-center text-white">
+              <span className="text-3xl underline">Sign Up</span>
+              <br /> to continue
+            </p>
+
+            <form method="POST" action="#" className="mt-8 space-y-6">
+              <div className="rounded-md shadow-sm">
+                <div>
+                  <label className="sr-only" htmlFor="email">
+                    user name
+                  </label>
+                  <input
+                    placeholder="User Name"
+                    className="appearance-none relative block w-full px-3 py-1 text-md sm:text-xl border border-gray-700 bg-white text-black font-semibold rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 "
+                    required
+                    type="text"
+                    name="userName"
+                    id="userName"
+                  />
+                </div>
+
+                <div className="mt-4">
+                  <label className="sr-only " htmlFor="email">
+                    Email address
+                  </label>
+                  <input
+                    placeholder="Email address"
+                    className="appearance-none relative block w-full px-3 py-1 text-md sm:text-xl border border-gray-700 bg-white text-black font-semibold rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 "
+                    required
+                    autoComplete="email"
+                    type="email"
+                    name="email"
+                    id="email"
+                  />
+                </div>
+
+                <div className="mt-4">
+                  <label className="sr-only" htmlFor="password">
+                    Password
+                  </label>
+                  <input
+                    placeholder="Password"
+                    className="appearance-none relative block w-full px-3 py-1 text-md sm:text-xl border border-gray-700 bg-white text-black font-semibold rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 "
+                    required
+                    autoComplete="current-password"
+                    type="password"
+                    name="password"
+                    id="password"
+                  />
+                </div>
+              </div>
+
+              <div className="flex items-center gap-5 justify-between mt-4">
+                <div className="flex items-center ">
+                  <input
+                    className="h-4 w-4 text-indigo-500 focus:ring-indigo-400 border-gray-600 rounded"
+                    type="checkbox"
+                    name="remember-me"
+                    id="remember-me"
+                  />
+                  <label
+                    className="ml-2 block text-sm text-white"
+                    htmlFor="remember-me"
+                  >
+                    Remember me
+                  </label>
+                </div>
+
+                <div className="text-sm">
+                  <Link
+                    className="font-medium text-black duration-150 hover:text-indigo-50"
+                    href="/forgot-password"
+                  >
+                    Forgot your password?
+                  </Link>
+                </div>
+              </div>
+
+              <div>
+                <button
+                  className="group relative w-full flex justify-center py-1 text-2xl px-4 border border-transparent font-headerFont cursor-pointer duration-150 text-black font-medium rounded-md hover:text-white  bg-white hover:bg-amber-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  type="submit"
+                >
+                  Sign Up
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <div className="px-8 py-4 bg-gray-700 text-center">
+            <span className="text-gray-400">Already have an account</span>{" "}
+            <Link
+              className="font-medium text-white duration-150 hover:text-brand"
+              href="/signIn"
+            >
+              Sign in
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default page;

@@ -6,7 +6,7 @@ import { TbShoppingCartCopy } from "react-icons/tb";
 import { IoLocationOutline } from "react-icons/io5";
 import { FiUser } from "react-icons/fi";
 import { RiLogoutBoxRLine } from "react-icons/ri";
-
+import Link from "next/link"
 
 const AccountMenu = () => {
   return (
@@ -41,9 +41,11 @@ const AccountMenu = () => {
                 </button>
               </li>
               <li>
-                <button className="flex gap-2 items-center py-3 px-2  text-lg text-primary font-textFont  border border-primary/30 shadow-sm rounded-xl duration-150  w-full hover:bg-zinc-100 hover:px-5 lg:w-[250px] hover:w-[270px] hover:text-brand focus:bg-brand focus:text-white lg:focus:w-[270px] cursor-pointer">
-                  <RiLogoutBoxRLine /> Logout
-                </button>
+                <Link href="/signIn">
+                  <button className="flex gap-2 items-center py-3 px-2  text-lg text-primary font-textFont  border border-primary/30 shadow-sm rounded-xl duration-150  w-full hover:bg-zinc-100 hover:px-5 lg:w-[250px] hover:w-[270px] hover:text-brand focus:bg-brand focus:text-white lg:focus:w-[270px] cursor-pointer">
+                    <RiLogoutBoxRLine /> Logout
+                  </button>
+                </Link>
               </li>
             </ul>
           </div>
