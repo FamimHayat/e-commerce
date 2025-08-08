@@ -1,6 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import ProductItems from "../home/PopularProducts/ProductItems";
+import { FaArrowRight } from "react-icons/fa"
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 
 const ShopProductList = () => {
   const [showAll, setShowAll] = useState(false);
@@ -49,8 +51,27 @@ const ShopProductList = () => {
           )}
         </div>
 
-        <div className="py-5 text-zinc-500 text-3xl text-center md:text-left">
-          page buttons
+        <div className="pt-10  text-zinc-500 text-3xl text-center md:text-left">
+          <ul className="scale-85 sm:scale-100 flex gap-2 justify-center lg:justify-start">
+            <li className="p-1 flex items-center justify-center w-10 h-10 text-primary bg-zinc-300 duration-150 rounded-full hover:bg-brand cursor-pointer hover:text-white">
+              <p className="text-2xl  ">1</p>
+            </li>
+            <li className="p-1 flex items-center justify-center w-10 h-10 text-primary bg-zinc-300 duration-150 rounded-full hover:bg-brand cursor-pointer hover:text-white">
+              <p className="text-2xl  ">2</p>
+            </li>
+            <li className="p-1 flex items-center justify-center w-10 h-10 text-primary bg-zinc-300 duration-150 rounded-full hover:bg-brand cursor-pointer hover:text-white">
+              <p className="text-2xl  ">3</p>
+            </li>
+            <li>.....</li>
+            <li className="p-1 flex items-center justify-center w-10 h-10 text-primary bg-zinc-300 duration-150 rounded-full hover:bg-brand cursor-pointer hover:text-white">
+              <p className="text-2xl  ">6</p>
+            </li>
+            <li className="p-1 flex items-center justify-center w-10 h-10 text-primary bg-zinc-300 duration-150 rounded-full hover:bg-brand cursor-pointer hover:text-white">
+              <p className="text-2xl  ">
+                <MdOutlineKeyboardArrowRight />
+              </p>
+            </li>
+          </ul>
         </div>
       </div>
     </section>

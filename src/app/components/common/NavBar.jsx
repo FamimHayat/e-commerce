@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { FaBox, FaSearch } from "react-icons/fa";
-import { PiShoppingCart } from "react-icons/pi";
+import { PiShoppingCart, PiUser } from "react-icons/pi";
 import { FaChevronDown, FaFireAlt } from "react-icons/fa";
 import { IoCloseCircleSharp, IoReorderThreeOutline } from "react-icons/io5";
 import { TfiHeadphoneAlt } from "react-icons/tfi";
@@ -67,12 +67,20 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  href="/login"
-                  className="flex items-center gap-1 text-white rounded-md text-lg md:text-2xl px-2 py-1 bg-brand font-headerFont duration-200 button-shadow-hover"
+                  href="/myAccount"
+                  className="flex items-center gap-1 text-white rounded-md text-2xl px-2 py-1 bg-brand font-headerFont duration-200 button-shadow-hover"
                 >
-                  login
+                  <PiUser /> <span className="hidden md:flex">Account</span>
                 </Link>
               </li>
+              {/* <li>
+                <Link
+                  href="/myAccount"
+                  className="flex items-center gap-1 text-white rounded-md text-lg md:text-2xl px-2 py-1 bg-brand font-headerFont duration-200 button-shadow-hover"
+                >
+                  Account
+                </Link>
+              </li> */}
             </ul>
           </div>
 
@@ -246,43 +254,64 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link href="/" className="text-sm lg:text-md xl:text-lg transition hover:text-brand ">
+              <Link
+                href="/"
+                className="text-sm lg:text-md xl:text-lg transition hover:text-brand "
+              >
                 Home
               </Link>
             </li>
             <li>
-              <Link href="/" className="text-sm lg:text-md xl:text-lg transition hover:text-brand ">
+              <Link
+                href="/"
+                className="text-sm lg:text-md xl:text-lg transition hover:text-brand "
+              >
                 About
               </Link>
             </li>
             <li>
-              <Link href="/shop" className="text-sm lg:text-md xl:text-lg transition hover:text-brand ">
+              <Link
+                href="/shop"
+                className="text-sm lg:text-md xl:text-lg transition hover:text-brand "
+              >
                 Shop
               </Link>
             </li>
             <li>
-              <Link href="/" className="text-sm lg:text-md xl:text-lg transition hover:text-brand ">
+              <Link
+                href="/"
+                className="text-sm lg:text-md xl:text-lg transition hover:text-brand "
+              >
                 Vendors
               </Link>
             </li>
 
             {/* Desktop Mega Menu */}
-             <li className="relative group ">
+            <li className="relative group ">
               <MegaMenu />
             </li>
 
             <li>
-              <Link href="/" className="text-sm lg:text-md xl:text-lg transition hover:text-brand ">
+              <Link
+                href="/"
+                className="text-sm lg:text-md xl:text-lg transition hover:text-brand "
+              >
                 Blog
               </Link>
             </li>
             <li>
-              <Link href="/" className="text-sm lg:text-md xl:text-lg transition hover:text-brand ">
+              <Link
+                href="/"
+                className="text-sm lg:text-md xl:text-lg transition hover:text-brand "
+              >
                 Pages
               </Link>
             </li>
             <li>
-              <Link href="/" className="text-sm lg:text-md xl:text-lg transition hover:text-brand ">
+              <Link
+                href="/"
+                className="text-sm lg:text-md xl:text-lg transition hover:text-brand "
+              >
                 Contact
               </Link>
             </li>
