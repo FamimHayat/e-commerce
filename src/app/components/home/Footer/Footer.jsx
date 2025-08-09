@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import FooterTag from "./FooterTag"
+import FooterTag from "./FooterTag";
 
 const Footer = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -65,10 +65,8 @@ const Footer = () => {
               />
             </div>
             <div className="mt-5 flex flex-col gap-3 text-md text-primary font-textFont items-center">
-              <h2 >
-                Awesome grocery store website template
-              </h2>
-              <p >
+              <h2>Awesome grocery store website template</h2>
+              <p>
                 <span className="font-semibold mr-1 ">Address: </span> 5171 W
                 Campbell Ave undefined Kent, Utah 53127 United States
               </p>
@@ -87,7 +85,7 @@ const Footer = () => {
           </div>
 
           {/* Lists Section */}
-          <div className="max-w-4xl grid sm:grid-cols-2 md:grid-cols-4 gap-5 lg:ml-10 justify-items-center w-full mt-5 mb-10">
+          <div className="max-w-4xl grid sm:grid-cols-2 md:grid-cols-4 gap-3 lg:ml-10 justify-items-center w-full mt-5 mb-10">
             {/* Company */}
             <div>
               <h2
@@ -98,28 +96,45 @@ const Footer = () => {
                 {isMobile && <Chevron open={toggles.company} />}
               </h2>
               <ul
-                className={`flex flex-col gap-2 text-md text-primary font-textFont ${
+                className={`flex flex-col gap-2 md:gap-3 text-md text-primary font-textFont ${
                   isMobile && !toggles.company ? "hidden" : "block"
                 }`}
               >
-                <li>about us</li>
                 <li>
-                  <Link href="/">delivery information</Link>
+                  <Link href="/" className="duration-150 hover:text-brand">
+                    {" "}
+                    about us
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/">privacy policy</Link>
+                  <Link href="/" className="duration-150 hover:text-brand">
+                    delivery information
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/">terms & condition</Link>
+                  <Link href="/" className="duration-150 hover:text-brand">
+                    privacy policy
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/">contact us</Link>
+                  <Link href="/" className="duration-150 hover:text-brand">
+                    terms & condition
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/">support center</Link>
+                  <Link href="/" className="duration-150 hover:text-brand">
+                    contact us
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/">careers</Link>
+                  <Link href="/" className="duration-150 hover:text-brand">
+                    support center
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/" className="duration-150 hover:text-brand">
+                    careers
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -134,28 +149,45 @@ const Footer = () => {
                 {isMobile && <Chevron open={toggles.account} />}
               </h2>
               <ul
-                className={`flex flex-col gap-2 md:gap-3 lg:gap-5 text-md text-primary font-textFont ${
+                className={`flex flex-col gap-2 md:gap-3  text-md text-primary font-textFont ${
                   isMobile && !toggles.account ? "hidden" : "block"
                 }`}
               >
-                <li>about us</li>
                 <li>
-                  <Link href="/">delivery information</Link>
+                  <Link href="/" className="duration-150 hover:text-brand">
+                    {" "}
+                    about us
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/">privacy policy</Link>
+                  <Link href="/" className="duration-150 hover:text-brand">
+                    delivery information
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/">terms & condition</Link>
+                  <Link href="/" className="duration-150 hover:text-brand">
+                    privacy policy
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/">contact us</Link>
+                  <Link href="/" className="duration-150 hover:text-brand">
+                    terms & condition
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/">support center</Link>
+                  <Link href="/" className="duration-150 hover:text-brand">
+                    contact us
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/">careers</Link>
+                  <Link href="/" className="duration-150 hover:text-brand">
+                    support center
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/" className="duration-150 hover:text-brand">
+                    careers
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -170,28 +202,45 @@ const Footer = () => {
                 {isMobile && <Chevron open={toggles.corporate} />}
               </h2>
               <ul
-                className={`flex flex-col gap-2 md:gap-3 lg:gap-5 text-md text-primary font-textFont ${
+                className={`flex flex-col gap-2 md:gap-3 text-md text-primary font-textFont ${
                   isMobile && !toggles.corporate ? "hidden" : "block"
                 }`}
               >
-                <li>about us</li>
                 <li>
-                  <Link href="/">delivery information</Link>
+                  <Link href="/" className="duration-150 hover:text-brand">
+                    {" "}
+                    about us
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/">privacy policy</Link>
+                  <Link href="/" className="duration-150 hover:text-brand">
+                    delivery information
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/">terms & condition</Link>
+                  <Link href="/" className="duration-150 hover:text-brand">
+                    privacy policy
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/">contact us</Link>
+                  <Link href="/" className="duration-150 hover:text-brand">
+                    terms & condition
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/">support center</Link>
+                  <Link href="/" className="duration-150 hover:text-brand">
+                    contact us
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/">careers</Link>
+                  <Link href="/" className="duration-150 hover:text-brand">
+                    support center
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/" className="duration-150 hover:text-brand">
+                    careers
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -206,28 +255,45 @@ const Footer = () => {
                 {isMobile && <Chevron open={toggles.popular} />}
               </h2>
               <ul
-                className={`flex flex-col gap-2 md:gap-3 lg:gap-5 text-md text-primary font-textFont ${
+                className={`flex flex-col gap-2 md:gap-3 text-md text-primary font-textFont ${
                   isMobile && !toggles.popular ? "hidden" : "block"
                 }`}
               >
-                <li>about us</li>
                 <li>
-                  <Link href="/">delivery information</Link>
+                  <Link href="/" className="duration-150 hover:text-brand">
+                    {" "}
+                    about us
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/">privacy policy</Link>
+                  <Link href="/" className="duration-150 hover:text-brand">
+                    delivery information
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/">terms & condition</Link>
+                  <Link href="/" className="duration-150 hover:text-brand">
+                    privacy policy
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/">contact us</Link>
+                  <Link href="/" className="duration-150 hover:text-brand">
+                    terms & condition
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/">support center</Link>
+                  <Link href="/" className="duration-150 hover:text-brand">
+                    contact us
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/">careers</Link>
+                  <Link href="/" className="duration-150 hover:text-brand">
+                    support center
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/" className="duration-150 hover:text-brand">
+                    careers
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -280,7 +346,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="container"><FooterTag/></div>
+      <div className="container">
+        <FooterTag />
+      </div>
     </footer>
   );
 };

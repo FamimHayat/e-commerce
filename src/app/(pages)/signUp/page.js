@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const page = () => {
   return (
-    <div className="container flex justify-center py-10 px-2">
+    <div className="container flex justify-center items-center py-10 px-2 h-dvh">
       <div className="max-w-lg w-full">
         <div className="bg-brand rounded-lg shadow-xl overflow-hidden hover:shadow-[0_10px_25px_-5px_rgba(0,0,0,0.1),0_10px_10px_-5px_rgba(0,0,0,0.04)]">
           <div className="p-8">
@@ -122,3 +122,4 @@ const page = () => {
 };
 
 export default page;
+

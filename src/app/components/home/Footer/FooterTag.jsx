@@ -45,7 +45,7 @@ const FooterTag = () => {
         <div className="flex justify-center items-center gap-3">
           <p className="text-primary font-textFont text-sm">Follow us </p>
           <ul className="flex gap-1">
-            <li className="bg-brand rounded-full w-8 h-8 ">
+            <li className="bg-brand rounded-full w-8 h-8 duration-150 hover:bg-amber-500">
               <Link
                 href="/"
                 className="flex justify-center items-center h-full"
@@ -53,7 +53,7 @@ const FooterTag = () => {
                 <FiFacebook className="text-xl text-white" />
               </Link>
             </li>
-            <li className="bg-brand rounded-full w-8 h-8 ">
+            <li className="bg-brand rounded-full w-8 h-8 duration-150 hover:bg-amber-500">
               <Link
                 href="/"
                 className="flex justify-center items-center h-full"
@@ -61,7 +61,7 @@ const FooterTag = () => {
                 <FiTwitter className="text-xl text-white" />
               </Link>
             </li>
-            <li className="bg-brand rounded-full w-8 h-8 ">
+            <li className="bg-brand rounded-full w-8 h-8 duration-150 hover:bg-amber-500">
               <Link
                 href="/"
                 className="flex justify-center items-center h-full"
@@ -69,7 +69,7 @@ const FooterTag = () => {
                 <FiInstagram className="text-xl text-white" />
               </Link>
             </li>
-            <li className="bg-brand rounded-full w-8 h-8 ">
+            <li className="bg-brand rounded-full w-8 h-8 duration-150 hover:bg-amber-500">
               <Link
                 href="/"
                 className="flex justify-center items-center h-full"
@@ -77,7 +77,7 @@ const FooterTag = () => {
                 <FaPinterest className="text-xl text-white" />
               </Link>
             </li>
-            <li className="bg-brand rounded-full w-8 h-8 ">
+            <li className="bg-brand rounded-full w-8 h-8 duration-150 hover:bg-amber-500">
               <Link
                 href="/"
                 className="flex justify-center items-center h-full"

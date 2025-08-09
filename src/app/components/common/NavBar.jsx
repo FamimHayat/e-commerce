@@ -59,7 +59,7 @@ const Navbar = () => {
               <li>
                 <Link
                   href="/cart"
-                  className="flex items-center gap-1 text-white rounded-md text-2xl px-2 py-1 bg-brand font-headerFont duration-200 button-shadow-hover"
+                  className="flex items-center gap-1 text-white rounded-md text-2xl px-2 py-1 bg-brand font-headerFont duration-200 button-shadow-hover hover:bg-amber-500"
                 >
                   <PiShoppingCart />{" "}
                   <span className="hidden md:flex">cart</span>
@@ -68,7 +68,7 @@ const Navbar = () => {
               <li>
                 <Link
                   href="/myAccount"
-                  className="flex items-center gap-1 text-white rounded-md text-2xl px-2 py-1 bg-brand font-headerFont duration-200 button-shadow-hover"
+                  className="flex items-center gap-1 text-white rounded-md text-2xl px-2 py-1 bg-brand font-headerFont duration-200 button-shadow-hover  hover:bg-amber-500"
                 >
                   <PiUser /> <span className="hidden md:flex">Account</span>
                 </Link>
@@ -205,7 +205,7 @@ const Navbar = () => {
           <div className="relative">
             <h3
               onClick={() => setShow(!show)}
-              className="flex items-center gap-1 p-2 text-xs font-bold text-white bg-brand rounded-md cursor-pointer duration-150 hover:bg-white hover:text-text hover:border-brand xl:text-base xl:gap-2 xl:px-6 xl:py-3"
+              className="flex items-center gap-1 p-1 border-2 border-brand text-xs font-bold text-white hover:text-primary bg-brand rounded-md cursor-pointer duration-150 hover:bg-white  hover:border-brand xl:text-base xl:gap-2 xl:px-6 xl:py-3"
             >
               <FaBox /> <span className="hidden xl:inline">Browse All</span>{" "}
               Categories <FaChevronDown />

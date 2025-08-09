@@ -31,20 +31,17 @@
 }
 
 .button-shadow {
-  box-shadow: #3bb77e66 0px 5px, #3bb77e4d 0px 10px, #3bb77e33 0px 15px,
-    #3bb77e1a 0px 20px, #3bb77e0d 0px 25px;
+  box-shadow: #f59e0b66 0px 5px, #f59e0b4d 0px 10px, #f59e0b33 0px 15px,
+    #f59e0b1a 0px 20px, #f59e0b0d 0px 25px;
 }
 .button-shadow-hover:hover {
-  box-shadow: #3bb77e66 0px 5px, #3bb77e4d 0px 10px, #3bb77e33 0px 15px,
-    #3bb77e1a 0px 20px, #3bb77e0d 0px 25px;
+  box-shadow: #f59e0b66 0px 5px, #f59e0b4d 0px 10px, #f59e0b33 0px 15px,
+    #f59e0b1a 0px 20px, #f59e0b0d 0px 25px;
 }
 
 .product-shadow {
-box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 .product-shadow-hover:hover {
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
-
-
-

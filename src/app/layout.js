@@ -1,19 +1,15 @@
+import ClientLayoutWrapper from "./ClientLayoutWrapper"
 import "./globals.css";
-
-import NavBar from "./components/common/NavBar";
-
 import { Noto_Sans, Open_Sans } from "next/font/google";
-import Footer from "./components/home/Footer/Footer"
-import FooterBanner from "./components/home/FooterBanner/FooterBanner"
-import ServiceTags from "./components/home/Services/ServiceTags"
 
-const notoSans = Noto_Sans({
+
+export const notoSans = Noto_Sans({
   subsets: ["latin"],
   variable: "--font-noto-sans",
   display: "swap",
 });
 
-const openSans = Open_Sans({
+export const openSans = Open_Sans({
   subsets: ["latin"],
   variable: "--font-open-sans",
   display: "swap",
@@ -31,11 +27,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${notoSans.variable} ${openSans.variable}`}>
       <body className="antialiased">
-        <NavBar />
-        {children}
-        <FooterBanner />
-        <ServiceTags />
-        <Footer />
+        <ClientLayoutWrapper>{children}</ClientLayoutWrapper>
       </body>
     </html>
   );
