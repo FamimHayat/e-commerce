@@ -62,7 +62,7 @@ const DealOfTheDayItems = ({ style }) => {
                     $32.85
                   </del>
                 </p>
-                <button className="flex items-center gap-1 text-white rounded-md text-lg px-2 py-1 border-brand font-headerFont duration-200 bg-brand button-shadow-hover">
+                <button className="flex items-center gap-1 text-white rounded-md text-lg px-2 py-1 border-brand font-headerFont duration-200 bg-brand hover:bg-amber-500 cursor-pointer  button-shadow-hover">
                   <PiShoppingCartDuotone /> add
                 </button>
               </div>

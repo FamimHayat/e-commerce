@@ -1,5 +1,5 @@
-import React from 'react'
-import BannerSliderTag from '../BannerSlider/BannerSliderTag'
+import React from "react";
+import BannerSliderTag from "../BannerSlider/BannerSliderTag";
 
 const FooterBanner = () => {
   return (
@@ -22,7 +22,7 @@ const FooterBanner = () => {
                 placeholder="your email address"
                 className="w-full rounded-lg bg-transparent px-1 py-3 text-base text-gray-700 focus:outline-none sm:pl-4 sm:pr-35"
               />
-              <button className="absolute right-1 top-1 bottom-1 cursor-pointer rounded-xl bg-brand px-6 font-medium text-white focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2">
+              <button className="absolute right-1 top-1 bottom-1 cursor-pointer rounded-xl bg-brand px-6 font-medium text-white duration-200 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2 hover:bg-amber-400">
                 Subscribe
               </button>
             </div>
@@ -31,6 +31,6 @@ const FooterBanner = () => {
       </div>
     </div>
   );
-}
+};
 
-export default FooterBanner
+export default FooterBanner;

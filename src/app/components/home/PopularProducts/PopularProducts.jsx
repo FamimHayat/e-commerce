@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "../../common/Header"
-import ProductItems from "./ProductItems"
+import Header from "../../common/Header";
+import ProductItems from "../../common/ProductItems";
 
 const PopularProducts = () => {
   return (
@@ -21,7 +21,6 @@ const PopularProducts = () => {
           <ProductItems />
           <ProductItems />
         </div>
-       
       </div>
     </>
   );

@@ -15,9 +15,9 @@ const ShopNowItems = ({ style }) => {
         <Link
           href="/"
           className="flex items-center gap-2 rounded-lg bg-brand p-3 text-lg text-white duration-250 mt-10 font-textFont md:w-fit md:p-2 md:text-md 
-          button-shadow-hover hover:scale-105"
+          button-shadow-hover hover:scale-105 hover:bg-amber-400"
         >
-          shop now <LuMoveRight className="mt-1"/>
+          shop now <LuMoveRight className="mt-1" />
         </Link>
       </div>
     </div>

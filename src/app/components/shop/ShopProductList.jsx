@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import ProductItems from "../home/PopularProducts/ProductItems";
-import { FaArrowRight } from "react-icons/fa"
+import ProductItems from "../common/ProductItems";
+import { FaArrowRight } from "react-icons/fa";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 
 const ShopProductList = () => {

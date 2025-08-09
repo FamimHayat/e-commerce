@@ -3,7 +3,7 @@
 import React from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
-import ProductItems from "../PopularProducts/ProductItems";
+import ProductItems from "../../common/ProductItems";
 
 const BestSaleSlider = () => {
   return (

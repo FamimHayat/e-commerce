@@ -46,7 +46,7 @@ const ProductItems = () => {
               $32.85{" "}
               <del className="text-sm pl-2 opacity-50 text-primary">$32.85</del>
             </p>
-            <button className="mt-2 flex items-center justify-center gap-1 text-white rounded-md text-lg px-2 py-1 cursor-pointer border-brand font-headerFont duration-200 bg-brand button-shadow-hover">
+            <button className="mt-2 flex items-center justify-center gap-1 text-white rounded-md text-lg px-2 py-1 cursor-pointer border-brand font-headerFont duration-200 bg-brand button-shadow-hover hover:bg-amber-400">
               <PiShoppingCartDuotone /> add
             </button>
           </div>

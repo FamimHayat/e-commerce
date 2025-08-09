@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 
-const BannerSliderTag = ({headerText}) => {
+const BannerSliderTag = ({ headerText }) => {
   return (
     <div className="absolute flex px-10 h-full w-full flex-col items-center justify-center p-2 font-headerFont lg:mt-15 xl:items-start xl:justify-start">
       <div className="px-3 sm:p-0 xl:p-20">
@@ -16,13 +16,13 @@ const BannerSliderTag = ({headerText}) => {
             placeholder="your email address"
             className="w-full rounded-lg bg-transparent px-1 py-3 text-base text-gray-700 focus:outline-none sm:pl-4 sm:pr-35"
           />
-          <button className="absolute right-1 top-1 bottom-1 cursor-pointer rounded-xl bg-brand px-6 font-medium text-white focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2">
+          <button className="absolute right-1 top-1 bottom-1 cursor-pointer rounded-xl bg-brand px-6 font-medium text-white duration-150 hover:bg-amber-400 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2">
             Subscribe
           </button>
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default BannerSliderTag
+export default BannerSliderTag;

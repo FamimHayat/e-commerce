@@ -11,10 +11,10 @@ export default function Breadcrumb() {
     <div className="container my-10 px-2 sm:p-0">
       <nav
         aria-label="Breadcrumb"
-        className=" mb-4 py-7  sm:py-10 lg:py-15 rounded-2xl"
+        className=" mb-4 py-2  sm:py-3 lg:py-6 rounded-2xl"
         style={{ backgroundImage: "url('/banner-slider-2.png')" }}
       >
-        <ol className="flex items-center justify-center space-x-2 text-sm px-5 py-3 shadow-2xl rounded-3xl  bg-zinc-100 w-fit ml-5">
+        <ol className="flex items-center justify-center space-x-2 text-sm px-5 py-2    shadow-2xl rounded-2xl  bg-zinc-100 w-fit ml-5">
           <li>
             <Link
               href="/"
