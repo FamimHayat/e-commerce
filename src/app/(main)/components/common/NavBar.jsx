@@ -7,10 +7,9 @@ import { IoCloseCircleSharp, IoReorderThreeOutline } from "react-icons/io5";
 import { TfiHeadphoneAlt } from "react-icons/tfi";
 import Link from "next/link";
 import Image from "next/image";
-import MegaMenu from "./nav components/MegaMenu"
+import MegaMenu from "./nav components/MegaMenu";
 
-
-const Navbar = () => {
+const Navbar = ({ data, token }) => {
   const [show, setShow] = useState(false);
   const [sidebar, setSidebar] = useState(false);
 

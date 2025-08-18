@@ -1,10 +1,50 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { ToastContainer, toast } from "react-toastify";
+import { useRouter } from "next/navigation";
 
-const page = () => {
+const Page = () => {
+  const router = useRouter();
+  const [userData, setUserData] = useState({
+    username: "",
+    password: "",
+  });
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const res = await fetch("https://dummyjson.com/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          username: userData.username,
+          password: userData.password,
+        }),
+      });
+
+      const data = await res.json();
+
+      console.log("Login response:", data);
+      toast.success("Login successful");
+
+      setTimeout(() => {
+        router.push("/");
+      }, 1500);
+
+      if (res) {
+        document.cookie = `accessToken=${data.accessToken}; path=/;`;
+      } else {
+        toast.error(data.message || "Login failed");
+      }
+    } catch (err) {
+      console.error("Error:", err);
+    }
+  };
+
   return (
     <div className="container flex justify-center items-center py-10 px-2 h-dvh">
       <div className="max-w-lg w-full">
@@ -17,35 +57,35 @@ const page = () => {
               className="w-30 h-15 p-1 rounded-xl mx-auto bg-white"
               alt="brand-logo"
             />
-            <p className="mt-4  text-center text-white">
+            <p className="mt-4 text-center text-white">
               <span className="text-3xl underline">Sign In</span>
               <br /> to continue
             </p>
 
-            <form method="POST" action="#" className="mt-8 space-y-6">
+            <form onSubmit={handleSubmit} className="mt-8 space-y-6">
               <div className="rounded-md shadow-sm">
                 <div>
-                  <label className="sr-only" htmlFor="email">
-                    Email address
-                  </label>
                   <input
-                    placeholder="Email address"
-                    className="appearance-none relative block w-full px-3 py-1 text-md sm:text-xl border border-gray-700 bg-white text-black font-semibold rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 "
+                    onChange={(e) =>
+                      setUserData({ ...userData, username: e.target.value })
+                    }
+                    placeholder="User Name"
+                    className="appearance-none relative block w-full px-3 py-1 text-md sm:text-xl border border-gray-700 bg-white text-black font-semibold rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
                     required
-                    autoComplete="email"
-                    type="email"
-                    name="email"
-                    id="email"
+                    autoComplete="username"
+                    type="text"
+                    name="username"
+                    id="username"
                   />
                 </div>
 
                 <div className="mt-4">
-                  <label className="sr-only" htmlFor="password">
-                    Password
-                  </label>
                   <input
+                    onChange={(e) =>
+                      setUserData({ ...userData, password: e.target.value })
+                    }
                     placeholder="Password"
-                    className="appearance-none relative block w-full px-3 py-1 text-md sm:text-xl border border-gray-700 bg-white text-black font-semibold rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 "
+                    className="appearance-none relative block w-full px-3 py-1 text-md sm:text-xl border border-gray-700 bg-white text-black font-semibold rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
                     required
                     autoComplete="current-password"
                     type="password"
@@ -56,7 +96,7 @@ const page = () => {
               </div>
 
               <div className="flex items-center gap-5 justify-between mt-4">
-                <div className="flex items-center ">
+                <div className="flex items-center">
                   <input
                     className="h-4 w-4 text-indigo-500 focus:ring-indigo-400 border-gray-600 rounded"
                     type="checkbox"
@@ -83,7 +123,7 @@ const page = () => {
 
               <div>
                 <button
-                  className="group relative w-full flex justify-center py-1 text-2xl px-4 border border-transparent font-headerFont cursor-pointer duration-150 text-black font-medium rounded-md hover:text-white  bg-white hover:bg-amber-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  className="group relative w-full flex justify-center py-1 text-2xl px-4 border border-transparent font-headerFont cursor-pointer duration-150 text-black font-medium rounded-md hover:text-white bg-white hover:bg-amber-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                   type="submit"
                 >
                   Sign In
@@ -103,8 +143,10 @@ const page = () => {
           </div>
         </div>
       </div>
+
+      <ToastContainer position="top-right" autoClose={3000} />
     </div>
   );
 };
 
-export default page;
+export default Page;

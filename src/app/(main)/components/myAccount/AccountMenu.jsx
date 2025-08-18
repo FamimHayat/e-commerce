@@ -6,9 +6,9 @@ import { TbShoppingCartCopy } from "react-icons/tb";
 import { IoLocationOutline } from "react-icons/io5";
 import { FiUser } from "react-icons/fi";
 import { RiLogoutBoxRLine } from "react-icons/ri";
-import Link from "next/link"
+import Link from "next/link";
 
-const AccountMenu = () => {
+const AccountMenu = ({}) => {
   return (
     <section className="py-5 px-2 mb-20">
       <div className="container">
@@ -52,7 +52,7 @@ const AccountMenu = () => {
           <div className="col-span-1 md:col-span-2 md:col-start-2">
             <div className="flex flex-col gap-5">
               <h2 className="text-4xl text-primary font-textFont font-semibold mt-6 mb-3 lg:mt-20 lg:mb-5">
-                Hello Rosie!
+                Hello {}!
               </h2>
               <p className="text-lg text-primary/70  font-textFont  lg:max-w-3xl ">
                 From your account dashboard. you can easily check & view your
