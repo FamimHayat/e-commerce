@@ -21,6 +21,16 @@
   display: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.261);
+}
+
 @media (min-width: 768px) {
   .responsive-arrows .splide__arrows {
     display: flex !important;

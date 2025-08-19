@@ -69,7 +69,10 @@ const Navbar = ({ data, token }) => {
                   href="/myAccount"
                   className="flex items-center gap-1 text-white rounded-md text-2xl px-2 py-1 bg-brand font-headerFont duration-200 button-shadow-hover  hover:bg-amber-500"
                 >
-                  <PiUser /> <span className="hidden md:flex">Account</span>
+                  <PiUser />{" "}
+                  <span className="hidden md:flex">
+                    {token ? data.username : "Account"}
+                  </span>
                 </Link>
               </li>
               {/* <li>

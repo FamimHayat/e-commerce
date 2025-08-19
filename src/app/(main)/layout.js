@@ -1,5 +1,4 @@
 // app/layout.js
-
 import { cookies } from "next/headers";
 import "../globals.css";
 import { Noto_Sans, Open_Sans } from "next/font/google";
@@ -21,16 +20,29 @@ export const openSans = Open_Sans({
 });
 
 export default async function RootLayout({ children }) {
-  const cookieStore = cookies();
+  const cookieStore = cookies(); // no need for await here
   const token = cookieStore.get("accessToken")?.value;
 
   let userData = null;
 
   if (token) {
     try {
-      const res = await fetch("https://dummyjson.com/users/1"); // server fetch
-      userData = await res.json();
-    } catch {
+      const res = await fetch("https://dummyjson.com/auth/me", {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+        credentials: "include",
+      });
+
+      if (res.ok) {
+        userData = await res.json();
+        console.log("Fetched user:", userData);
+      } else {
+        console.error("Failed to fetch user:", res.status);
+      }
+    } catch (err) {
+      console.error("Error fetching user:", err);
       userData = null;
     }
   }
