@@ -1,7 +1,7 @@
-import Breadcrumb from '@/app/components/common/Breadcrumb'
-import DealOfTheDay from '@/app/components/home/DealsOfTheDay/DealOfTheDay'
-import ShopProductList from '@/app/components/shop/ShopProductList'
-import React from 'react'
+import React from "react";
+import Breadcrumb from "../../components/common/Breadcrumb";
+import ShopProductList from "../../components/shop/ShopProductList";
+import DealOfTheDay from "../../components/home/DealsOfTheDay/DealOfTheDay";
 
 const page = () => {
   return (
@@ -11,6 +11,6 @@ const page = () => {
       <DealOfTheDay />
     </>
   );
-}
+};
 
-export default page
+export default page;

@@ -1,6 +1,6 @@
-import Breadcrumb from "@/app/components/common/Breadcrumb";
 import Image from "next/image";
 import React from "react";
+import Breadcrumb from "../../components/common/Breadcrumb";
 
 const page = () => {
   return (
