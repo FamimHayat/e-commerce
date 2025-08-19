@@ -22,7 +22,8 @@ const AccountMenu = async ({}) => {
         headers: {
           Authorization: `Bearer ${token}`,
         },
-        credentials: "include",
+
+        cache: "no-store",
       });
 
       if (res.ok) {
@@ -71,7 +72,7 @@ const AccountMenu = async ({}) => {
                 <Link href="/signIn">
                   <button className="flex gap-2 items-center py-3 px-2  text-lg text-primary font-textFont  border border-primary/30 shadow-sm rounded-xl duration-150  w-full hover:bg-zinc-100 hover:px-5 lg:w-[250px] hover:w-[270px] hover:text-brand focus:bg-brand focus:text-white lg:focus:w-[270px] cursor-pointer">
                     <RiLogoutBoxRLine />
-                    {token ? "Logout" : "Sign-In/Sing-up"}
+                    {userData?.username ? "Logout" : "Sign-In/Sing-up"}
                   </button>
                 </Link>
               </li>
@@ -80,7 +81,9 @@ const AccountMenu = async ({}) => {
           <div className="col-span-1 md:col-span-2 md:col-start-2">
             <div className="flex flex-col gap-5">
               <h2 className="text-4xl text-primary font-textFont font-semibold mt-6 mb-3 lg:mt-20 lg:mb-5">
-                {token ? "hi " + userData?.username : "not logged in...,"}
+                {userData?.username
+                  ? "hi " + userData.username
+                  : "not logged in...,"}
               </h2>
               <p className="text-lg text-primary/70  font-textFont  lg:max-w-3xl ">
                 From your account dashboard. you can easily check & view your

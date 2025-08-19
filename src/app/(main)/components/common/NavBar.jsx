@@ -71,7 +71,7 @@ const Navbar = ({ data, token }) => {
                 >
                   <PiUser />{" "}
                   <span className="hidden md:flex">
-                    {token ? data.username : "Account"}
+                    {data?.username || "Account"}
                   </span>
                 </Link>
               </li>

@@ -20,7 +20,7 @@ export const openSans = Open_Sans({
 });
 
 export default async function RootLayout({ children }) {
-  const cookieStore = cookies(); // no need for await here
+  const cookieStore = cookies();
   const token = cookieStore.get("accessToken")?.value;
 
   let userData = null;
@@ -32,14 +32,14 @@ export default async function RootLayout({ children }) {
         headers: {
           Authorization: `Bearer ${token}`,
         },
-        credentials: "include",
+        cache: "no-store",
       });
 
       if (res.ok) {
         userData = await res.json();
         console.log("Fetched user:", userData);
       } else {
-        console.error("Failed to fetch user:", res.status);
+        console.warn("Failed to fetch user:", res.status);
       }
     } catch (err) {
       console.error("Error fetching user:", err);
