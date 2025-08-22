@@ -50,8 +50,6 @@ const BestSaleSlider = () => {
             <ProductItems />
           </div>
         </SplideSlide>
-
-        {/* Add more <SplideSlide> blocks as needed */}
       </Splide>
     </div>
   );

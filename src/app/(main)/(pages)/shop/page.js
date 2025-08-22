@@ -1,13 +1,13 @@
 import React from "react";
 import Breadcrumb from "../../components/common/Breadcrumb";
-import ShopProductList from "../../components/shop/ShopProductList";
 import DealOfTheDay from "../../components/home/DealsOfTheDay/DealOfTheDay";
+import ShopProduct from "../../components/shop/ShopProduct";
 
 const page = () => {
   return (
     <>
       <Breadcrumb />
-      <ShopProductList />
+      <ShopProduct />
       <DealOfTheDay />
     </>
   );
