@@ -75,13 +75,36 @@ export default async function ProductPage({ params }) {
         </div>
 
         <div className="border rounded-2xl border-black/10 mt-8 p-10">
-          <p className="rounded-2xl mb-5 px-5 py-3 shadow-md border border-black/20 w-fit font-semibold">
+          <div className="border-b border-black/10 pb-5"><p className="rounded-2xl mb-5 px-5 py-3 shadow-md border border-black/20 w-fit font-semibold">
             Description
           </p>
-          <div>
+          <div className="flex flex-col gap-5">
             <p className="text-lg text-black/70">
               {productDetails?.description}
             </p>
+            <p className="text-lg sm:text-xl bg-brand w-fit rounded-2xl py-1 px-2 text-white font-semibold text-shadow-2xs ">
+              {productDetails?.category}
+            </p>
+            <p className="text-lg sm:text-xl bg-brand w-fit rounded-2xl py-1 px-2 text-white font-semibold text-shadow-2xs ">
+              {productDetails?.shippingInformation}
+            </p>
+            <p className="text-lg sm:text-xl bg-brand w-fit rounded-2xl py-1 px-2 text-white font-semibold text-shadow-2xs ">
+              {productDetails?.warrantyInformation}
+            </p>
+            <p className="text-lg sm:text-xl bg-brand w-fit rounded-2xl py-1 px-2 text-white font-semibold text-shadow-2xs ">
+              {productDetails?.returnPolicy}
+            </p>
+            
+          </div></div>
+          <div className="border-b border-black/10 pt-10 pb-5">
+            <p className="text-3xl text-primary font-semibold mb-8">packinging & delivery</p>
+            <h2 className="rounded-2xl mb-5 px-5 py-3 shadow-md border text-black/70 border-black/20 w-fit font-semibold">Less lion goodness that euphemistically robin expeditiously bluebird smugly scratched far while thus cackled sheepishly rigid after due one assenting regarding censorious while occasional or this more crane went more as this less much amid overhung anathematic because much held one exuberantly sheep goodness so where rat wry well concomitantly.
+
+Scallop or far crud plain remarkably far by thus far iguana lewd precociously and and less rattlesnake contrary caustic wow this near alas and next and pled the yikes articulate about as less cackled dalmatian in much less well jeering for the thanks blindly sentimental whimpered less across objectively fanciful grimaced wildly some wow and rose jeepers outgrew lugubrious luridly irrationally attractively dachshund.</h2>
+          </div>
+          <div>
+            <h3  className="text-3xl text-primary font-semibold mb-8 pt-10">warning</h3>
+            <p className="rounded-2xl mb-5 px-5 py-3 shadow-md border text-black/70 border-black/20 w-fit font-semibold">Oil separation occurs naturally. May contain pieces of shell.</p>
           </div>
         </div>
       </div>
