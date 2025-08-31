@@ -61,7 +61,7 @@ const ProductItems = ({ productData }) => {
                 <button className=" gap-1 text-white rounded-md text-lg  cursor-pointer border-brand font-headerFont duration-200 bg-brand button-shadow-hover hover:bg-amber-400"></button>
               ) : (
                 <button className="mt-2 flex items-center justify-center gap-1 text-white rounded-md text-lg px-2 py-1 cursor-pointer border-brand font-headerFont duration-200 bg-brand button-shadow-hover hover:bg-amber-400">
-                  <PiShoppingCartDuotone /> add
+                  <PiShoppingCartDuotone /> add {`/${productData?.id}`}
                 </button>
               )}
             </div>

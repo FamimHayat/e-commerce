@@ -6,19 +6,19 @@ import ShopProductList from "./ShopProductList";
 export default function ShopProduct() {
   const [limit, setLimit] = useState(30);
   const [products, setProducts] = useState([]);
+  const [productData, setProductData] = useState({});
+  const totalProduct = productData.total || 0;
 
   const [skip, setSkip] = useState(0);
 
+
   const handlePrev = () => {
-    setSkip(limit - limit);
-  };
-  const handleNext = () => {
-    setSkip(limit + limit);
+    setSkip((prev) => Math.max(prev - limit, 0));
   };
 
-  console.log("====================================");
-  console.log(skip);
-  console.log("====================================");
+  const handleNext = () => {
+    setSkip((prev) => Math.min(prev + limit, totalProduct - limit));
+  };
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -28,6 +28,7 @@ export default function ShopProduct() {
         );
         const data = await res.json();
         setProducts(data.products);
+        setProductData(data);
       } catch (error) {
         console.error("Error fetching products:", error);
       }
@@ -36,9 +37,9 @@ export default function ShopProduct() {
     fetchProducts();
   }, [limit, skip]);
 
-  console.log("====================================");
-  console.log(products);
-  console.log("====================================");
+  const currentPage = Math.floor(skip / limit) + 1;
+  const totalPages = Math.ceil(totalProduct / limit);
+
   return (
     <section>
       <div className="container">
@@ -48,7 +49,10 @@ export default function ShopProduct() {
         >
           <select
             value={limit}
-            onChange={(e) => setLimit(Number(e.target.value))}
+            onChange={(e) => {
+              setLimit(Number(e.target.value));
+              setSkip(0);
+            }}
             className="border rounded px-2 py-1"
           >
             <option value={30}>30</option>
@@ -60,30 +64,34 @@ export default function ShopProduct() {
             <option value={210}>210</option>
           </select>
         </form>
-
         <ShopProductList productList={products} />
-
         <div className="flex justify-between mt-6">
-          {skip < 30 ? (
-            <button className="text-black/80 text-lg py-2 px-5 font-semibold duration-150 bg-gray-200  opacity-50 ">
+
+          {skip === 0 ? (
+            <button className="text-black/80 text-lg py-2 px-5 font-semibold duration-150 bg-gray-200 opacity-50">
               prev
             </button>
           ) : (
             <button
               onClick={handlePrev}
-              className="text-white text-lg py-2 px-5 font-semibold duration-150 bg-brand cursor-pointer hover:bg-black/80 "
+              className="text-white text-lg py-2 px-5 font-semibold duration-150 bg-brand cursor-pointer hover:bg-black/80"
             >
               prev
             </button>
           )}
-          {skip > 180 ? (
-            <button className="text-black/80 text-lg py-2 px-5 font-semibold duration-150 bg-gray-200 opacity-50 ">
+
+          <span className="text-sm font-medium text-gray-600">
+            Page {currentPage} of {totalPages}
+          </span>
+
+          {skip + limit >= totalProduct ? (
+            <button className="text-black/80 text-lg py-2 px-5 font-semibold duration-150 bg-gray-200 opacity-50">
               next
             </button>
           ) : (
             <button
               onClick={handleNext}
-              className="text-white text-lg py-2 px-5 font-semibold duration-150 bg-brand cursor-pointer hover:bg-black/80 "
+              className="text-white text-lg py-2 px-5 font-semibold duration-150 bg-brand cursor-pointer hover:bg-black/80"
             >
               next
             </button>
