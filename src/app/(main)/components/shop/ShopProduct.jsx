@@ -1,83 +1,51 @@
-"use client";
-
-import React, { useState, useEffect } from "react";
 import ShopProductList from "./ShopProductList";
+import LimitSelector from "./LimitSelector"; // Client Component
+import Link from "next/link";
 
-export default function ShopProduct() {
-  const [limit, setLimit] = useState(30);
-  const [products, setProducts] = useState([]);
-  const [productData, setProductData] = useState({});
+export const dynamic = "force-dynamic";
+
+async function fetchProducts(limit, skip) {
+  const res = await fetch(
+    `https://dummyjson.com/products?limit=${limit}&skip=${skip}`,
+    { cache: "no-store" }
+  );
+  return res.json();
+}
+
+export default async function ShopProduct({ searchParams }) {
+  const limit = parseInt(searchParams?.limit) || 30;
+  const skip = parseInt(searchParams?.skip) || 0;
+
+  const productData = await fetchProducts(limit, skip);
+  const products = productData.products;
   const totalProduct = productData.total || 0;
-
-  const [skip, setSkip] = useState(0);
-
-
-  const handlePrev = () => {
-    setSkip((prev) => Math.max(prev - limit, 0));
-  };
-
-  const handleNext = () => {
-    setSkip((prev) => Math.min(prev + limit, totalProduct - limit));
-  };
-
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const res = await fetch(
-          `https://dummyjson.com/products?limit=${limit}&skip=${skip}`
-        );
-        const data = await res.json();
-        setProducts(data.products);
-        setProductData(data);
-      } catch (error) {
-        console.error("Error fetching products:", error);
-      }
-    };
-
-    fetchProducts();
-  }, [limit, skip]);
 
   const currentPage = Math.floor(skip / limit) + 1;
   const totalPages = Math.ceil(totalProduct / limit);
+  const baseUrl = "/shop";
 
   return (
     <section>
       <div className="container">
-        <form
-          onSubmit={(e) => e.preventDefault()}
-          className="flex items-center gap-4 mb-4"
-        >
-          <select
-            value={limit}
-            onChange={(e) => {
-              setLimit(Number(e.target.value));
-              setSkip(0);
-            }}
-            className="border rounded px-2 py-1"
-          >
-            <option value={30}>30</option>
-            <option value={60}>60</option>
-            <option value={90}>90</option>
-            <option value={120}>120</option>
-            <option value={150}>150</option>
-            <option value={180}>180</option>
-            <option value={210}>210</option>
-          </select>
-        </form>
-        <ShopProductList productList={products} />
-        <div className="flex justify-between mt-6">
+        {/* Client-side Limit Selector */}
+        <LimitSelector currentLimit={limit} baseUrl={baseUrl} />
 
+        {/* Server-side Product List */}
+        <ShopProductList productList={products} />
+
+        {/* Pagination */}
+        <div className="flex justify-between mt-6">
           {skip === 0 ? (
             <button className="text-black/80 text-lg py-2 px-5 font-semibold duration-150 bg-gray-200 opacity-50">
               prev
             </button>
           ) : (
-            <button
-              onClick={handlePrev}
+            <Link
+              href={`${baseUrl}?limit=${limit}&skip=${Math.max(skip - limit, 0)}`}
               className="text-white text-lg py-2 px-5 font-semibold duration-150 bg-brand cursor-pointer hover:bg-black/80"
             >
               prev
-            </button>
+            </Link>
           )}
 
           <span className="text-sm font-medium text-gray-600">
@@ -89,12 +57,12 @@ export default function ShopProduct() {
               next
             </button>
           ) : (
-            <button
-              onClick={handleNext}
+            <Link
+              href={`${baseUrl}?limit=${limit}&skip=${Math.min(skip + limit, totalProduct - limit)}`}
               className="text-white text-lg py-2 px-5 font-semibold duration-150 bg-brand cursor-pointer hover:bg-black/80"
             >
               next
-            </button>
+            </Link>
           )}
         </div>
       </div>

@@ -1,4 +1,3 @@
-// ShopProductList.jsx (no "use client")
 import ProductItems from "../common/ProductItems";
 
 export default function ShopProductList({ productList }) {
