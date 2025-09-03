@@ -1,5 +1,5 @@
 import ShopProductList from "./ShopProductList";
-import LimitSelector from "./LimitSelector"; // Client Component
+import LimitSelector from "./LimitSelector"; 
 import Link from "next/link";
 
 export const dynamic = "force-dynamic";
@@ -27,13 +27,12 @@ export default async function ShopProduct({ searchParams }) {
   return (
     <section>
       <div className="container">
-        {/* Client-side Limit Selector */}
+        
         <LimitSelector currentLimit={limit} baseUrl={baseUrl} />
 
-        {/* Server-side Product List */}
+        
         <ShopProductList productList={products} />
 
-        {/* Pagination */}
         <div className="flex justify-between mt-6">
           {skip === 0 ? (
             <button className="text-black/80 text-lg py-2 px-5 font-semibold duration-150 bg-gray-200 opacity-50">

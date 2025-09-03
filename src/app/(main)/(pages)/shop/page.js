@@ -6,7 +6,7 @@ export default function Page({ searchParams }) {
   return (
     <>
       <Breadcrumb />
-      <ShopProduct searchParams={searchParams} /> {/* pass it down */}
+      <ShopProduct searchParams={searchParams} /> 
       <DealOfTheDay />
     </>
   );
