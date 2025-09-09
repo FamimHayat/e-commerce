@@ -10,9 +10,8 @@ export default function Home() {
   return (
     <>
       <BannerSlider />
-      <Catagories />  
+      <Catagories />
       <PopularProducts />
-      <BestSaleProducts />
       <DealOfTheDay />
       <ProductShortList />
     </>
